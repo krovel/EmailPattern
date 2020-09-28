@@ -9,7 +9,7 @@ public class EmailPattern {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Email for pattern checking: ");
 		String mail = sc.nextLine();
-		Pattern p = Pattern.compile("^abc+[_+-.]*[a-zA-Z0-9]*@bridgelabz.co+");
+		Pattern p = Pattern.compile("^abc+[_+-.]*[a-zA-Z0-9]*@bridgelabz.co+([.][a-zA-Z]{2})?$");
 		Matcher m = p.matcher(mail);
 		if (m.find()) {
 			System.out.println("Valid Email.");
